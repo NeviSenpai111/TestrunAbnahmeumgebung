@@ -1,0 +1,19 @@
+﻿@page
+@model TestrunAbnahmeumgebung.Components.Pages.IndexModel
+
+<h1>DB Connection Test</h1>
+
+@if (Model.Pings is null)
+{
+    <p>Loading…</p>
+}
+else
+{
+    <table>
+        <tr><th>Id</th><th>Timestamp (UTC)</th></tr>
+        @foreach (var p in Model.Pings)
+        {
+            <tr><td>@p.Id</td><td>@p.Timestamp</td></tr>
+        }
+    </table>
+}
