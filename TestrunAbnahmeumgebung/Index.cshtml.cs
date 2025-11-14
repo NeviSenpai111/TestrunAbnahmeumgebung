@@ -1,9 +1,9 @@
 ﻿using System.Data.Entity;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TestrunAbnahmeumgebung.Components.Pages;
+namespace TestrunAbnahmeumgebung;
 
-public class IndexModel : PageModel
+public partial class IndexModel : PageModel
 {
     private readonly TestDbContext _db;
 
