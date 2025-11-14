@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TestrunAbnahmeumgebung;
+namespace TestrunAbnahmeumgebung.Components.Pages;
 
 public partial class IndexModel : PageModel
 {
