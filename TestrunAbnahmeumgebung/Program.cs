@@ -10,14 +10,19 @@ builder.Services.AddDbContext<TestDbContext>(options =>
         sqlOptions => sqlOptions.EnableRetryOnFailure()));
 
 // Optionally add Razor Pages
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
-// Map Razor Pages
+app.UseStaticFiles();
+
 app.MapRazorPages();
 
 app.Run();
+
+
+
 
 
 // Define your DbContext
