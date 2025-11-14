@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Use your connection string name (as configured in App Service)
-var connectionString = builder.Configuration.GetConnectionString("AppDb");
+var connectionString = builder.Configuration.GetConnectionString("AppDB");
 
 builder.Services.AddDbContext<TestDbContext>(options =>
     options.UseSqlServer(connectionString,
