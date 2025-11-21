@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿// Backup of original Razor Pages Index.cshtml.cs (disabled). Moved because project uses MVC controllers now.
+/*
+using System.Data.Entity;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace TestrunAbnahmeumgebung;
@@ -23,3 +25,4 @@ public partial class IndexModel : PageModel
         Pings = await _db.Pings.OrderByDescending(p => p.Id).Take(10).ToListAsync();
     }
 }
+*/

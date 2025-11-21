@@ -1,0 +1,32 @@
+﻿@model List<TestrunAbnahmeumgebung.Models.Ping>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>DB Connection Test</h1>
+
+@if (ViewData["Error"] != null)
+{
+    <div class="error">Error: @ViewData["Error"]</div>
+}
+
+@if (Model == null || !Model.Any())
+{
+    <p>No pings found.</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr><th>Id</th><th>Timestamp (UTC)</th><th>Message</th></tr>
+        </thead>
+        <tbody>
+        @foreach (var p in Model)
+        {
+            <tr><td>@p.Id</td><td>@p.Timestamp.ToString("u")</td><td>@p.Message</td></tr>
+        }
+        </tbody>
+    </table>
+}
+
+<p>Try <a href="/healthz">/healthz</a> for a simple health response.</p>
