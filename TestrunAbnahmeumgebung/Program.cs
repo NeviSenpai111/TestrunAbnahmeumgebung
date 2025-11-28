@@ -5,7 +5,7 @@ using TestrunAbnahmeumgebung.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Try to read connection string; if missing, fall back to InMemory for local/dev testing
-var connectionString = builder.Configuration.GetConnectionString("AppDB");
+var connectionString = builder.Configuration.GetConnectionString("eShop26DB");
 
 if (string.IsNullOrWhiteSpace(connectionString))
 {
