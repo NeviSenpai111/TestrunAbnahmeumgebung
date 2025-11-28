@@ -1,3 +1,5 @@
+// This Code Belongs to Nevio Calianno. Any unauthrized use will have consequences with court.
+
 using Microsoft.EntityFrameworkCore;
 using TestrunAbnahmeumgebung.Models;
 using TestrunAbnahmeumgebung.Services;
