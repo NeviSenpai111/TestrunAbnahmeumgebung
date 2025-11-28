@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TestrunAbnahmeumgebung.Models;
+using TestrunAbnahmeumgebung.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,9 @@ else
         options.UseSqlServer(connectionString,
             sqlOptions => sqlOptions.EnableRetryOnFailure()));
 }
+
+// Register DB checker service
+builder.Services.AddSingleton<IDbChecker, DbChecker>();
 
 // Use MVC (Controllers + Views)
 builder.Services.AddControllersWithViews();
